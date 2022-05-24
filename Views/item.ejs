@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= pageTitle %> </title>
+</head>
+<body>
+    <h1>Item Details Page</h1>
+    
+   <ol>
+         
+                <li>
+                    <%= products.title %> 
+                     <ul>
+                         <li>ID: <%= products.id %> </li>
+                         <li> Desctiption: <%= products.description %></li>   
+                         <li> Price: <%= products.price %></li>
+                         <li> Discount Percentage <%= products.discountPercentage %></li>
+                         <li> Rating: <%= products.rating %></li>
+                         <li> Stock: <%= products.stock %></li>
+                         <li> Brand: <%= products.brand %></li>
+                         <li> Category: <%= products.category %></li>
+                         
+                            <% if (products.images  !=  undefined) { %>
+                              <div>
+                              <img src="<%= products.thumbnail %>" width="50" height = '50'>
+                              </div>
+                             <% } %> 
+                        
+                          
+                             <% if (products.images !=  undefined) { %>
+                                <% products.images.forEach((img) =>{  %>
+                                    
+                                   <span> <img src="<%= img %>" width= '100'  height = '100' ></span>
+                                    
+                                <% } ) %>   
+                             
+                             <% } %>
+                              
+                            
+                         
+
+                       
+                          
+                     </ul>
+                </li>
+        
+   </ol>
+</body>
+</html>
+ 

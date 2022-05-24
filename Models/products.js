@@ -1,4 +1,4 @@
-products = [
+module.exports = [
     {
       "id": 1,
       "title": "iPhone 9",
